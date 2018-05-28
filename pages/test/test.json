@@ -1,0 +1,7 @@
+{
+  "backgroundColor": "#f0f",
+  "navigationBarTitleText": "ITEM",
+  "usingComponents": {
+    "newsItem": "/components/newsItem/newsItem"
+  }
+}

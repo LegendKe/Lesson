@@ -1,0 +1,33 @@
+{
+  "pages": [
+    "pages/takeLessons/lessonList",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#007af8",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "PTYT",
+    "enablePullDownRefresh": true,
+    "usingComponents": {
+      "lessonInfo": "/components/lessonInfo/lessonInfo"
+    }
+  },
+  "tabBar": {
+    "backgroundColor": "#f6f6f6",
+    "color": "#9e9e9e",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "老师",
+        "iconPath": "static/img/apparel.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "我的",
+        "iconPath": "static/img/account.png"
+      }
+    ]
+  }
+}

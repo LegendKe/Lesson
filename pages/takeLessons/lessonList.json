@@ -1,0 +1,10 @@
+{
+  "backgroundColor": "#cccccc",
+  "navigationBarTitleText": "智能抢课",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "lessonInfo": "/components/lessonInfo/lessonInfo",
+    "lessonDetail":"/components/lessonDetail/lessonDetail",
+    "newsItem":"/components/newsItem/newsItem"
+  }
+}

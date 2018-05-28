@@ -1,0 +1,21 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="poster">
+     <text class="poster-title">理优1对1春季课程</text>
+     <text class="poster-tip">正式上线</text>
+  </view>
+</view>
+<view class="feature-list">
+   <template is="feature-item" wx:for="{{feature_list}}" data="{{...item}}" wx:key="{{index}}"/>
+</view>
+<view class="footer">
+   <text>理优1对1，中小学在线提分专家</text>
+</view>
+<!-- 应用按钮模板 -->
+<template name="feature-item">
+  <view class="feature-list-item" style="background:{{background}};">
+   <navigator url="{{url}}">
+      <text>{{text}} </text>
+   </navigator>  
+  </view>
+</template>

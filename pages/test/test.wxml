@@ -1,0 +1,6 @@
+<!--pages/test/test.wxml-->
+<view>
+  <view wx:for="{{[1,2,3]}}">
+   <newsItem></newsItem>
+  </view>
+</view>

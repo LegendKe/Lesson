@@ -1,0 +1,47 @@
+<wxs module="dateFr" src="../../filter/dateFr.wxs"></wxs>
+<view class="wx-lesson-info" catchtap="_lessonDetail" data-lesson-info="{{lesson_info}}" data-index="{{index}}">
+  <view class="lesson-time" wx:if="{{lesson_info.state == 1}}">
+    <image src="../../static/img/loading.png" class="time-icon"></image>
+    <text>{{dateFr.DateFr.getTime(lesson_info.data).y+"年"+dateFr.DateFr.getTime(lesson_info.data).M+"月"+dateFr.DateFr.getTime(lesson_info.data).d+"日"}}</text>
+    <text class="week">{{lesson_info.weekday}}</text>
+    <text>{{lesson_info.time}}</text>
+  </view>
+  <view wx:if="{{lesson_info.state != 1}}" class="my-lesson-time">
+     <view class="title-left">
+        <image src="../../static/img/loading.png" class="title-icon"></image>
+        <text>我的课程</text>
+     </view>
+     <view class="title-right">
+        <image src="../../static/img/loading.png" class="title-icon" class="time-icon"></image>
+        剩余<text class="yellow">0天10小时45分钟</text>
+     </view>
+  </view>
+  <view class="lesson-info">
+    <view class="person-info">
+      <view class="head">
+        <image src="../../static/img/account.png" class="person-head"></image>
+      </view>
+      <view class="person">
+        <view class="top">
+          <text>{{lesson_info.name}}</text>
+          <image src="../../static/img/loading.png" class="sex"></image>
+        </view>
+        <view class="middle">
+          <text>{{lesson_info.age}}岁</text>
+          <text class="address">{{lesson_info.area}}{{lesson_info.address}}</text>
+        </view>
+        <view class="bottom">
+          <text>{{lesson_info.grade}}</text>
+          <text>{{lesson_info.subject}}</text>
+          <text>{{lesson_info.publish}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="btn-tack"  wx:if="{{lesson_info.state == 1}}" catchtap="_stackLesson" data-index="{{index}}">
+      <view>
+          <image src="../../static/img/loading.png"></image>
+          <text class="ml20">抢课</text>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,69 @@
+<view class="container" style="height:{{window_height+'px'}}" wx:if="{{isShow}}">
+  <view class="detail-wrap">
+    <view class="detail-top">
+      <view class="person-info">
+        <view class="head">
+          <image src="../../static/img/account.png"></image>
+        </view>
+        <view class="person">
+          <view class="name">
+            <text>{{lesson_detail.name}}</text>
+            <image src="../../static/img/loading.png"></image>
+          </view>
+          <view class="address">
+            <text>15岁</text>
+            <text class="mL20">上海静安</text>
+          </view>
+          <view class="grade">
+            <text>初二上册</text>
+            <text>数学</text>
+            <text>人教版</text>
+          </view>
+        </view>
+      </view>
+      <view class="lesson-time">
+        <image src="../../static/img/loading.png"></image>
+        试听时间
+        <text class="data">2018年4月14日</text>
+        <text>14:00-16:00</text>
+      </view>
+    </view>
+    <view class="lesson-bottom">
+      <view class="lesson-demand">
+        <view class="title">试听内容</view>
+        <view class="content">
+          <text>耐心细致</text>
+          <text>耐心细致</text>
+          <text>耐心细致</text>
+          <text>耐心细致</text>
+        </view>
+      </view>
+      <view class="audition-content">
+        <view class="title">
+          试听内容
+        </view>
+        <view class="content">
+          人教版的教材第35页
+        </view>
+      </view>
+      <view class="audition-demand">
+        <view class="title">试听需求</view>
+        <view class="content">
+          家长希望孩子今后的课时从发音开始教学的发音开始教学的发音开始教学的发音开始教学的
+        </view>
+      </view>
+      <view class="button-wrap">
+        <button class="tack btn" data-index="{{index}}" bindtap="_tack" wx:if="{{lesson_detail.state == 1}}">确认抢课</button>
+        <text class="no-tack" data-index="{{index}}" bindtap="_reject" wx:if="{{lesson_detail.state == 1}}">残忍拒绝</text>
+        <view wx:if="{{lesson_detail.state == 2}}" class="count_down">
+          <!-- <view class="count"> -->
+            <image src="../../static/img/loading.png"></image>
+            剩余
+            <text>0天10时45分</text>
+          <!-- </view> -->
+        </view>
+      </view>
+    </view>
+    <view class="close" bindtap="close">关</view>
+  </view>
+</view>
